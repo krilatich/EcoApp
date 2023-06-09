@@ -1,12 +1,13 @@
 package com.startup.ecoapp.feature.home.presentation
 
 import androidx.lifecycle.ViewModel
+import com.startup.ecoapp.feature.home.usecase.GetPostsUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class HomeViewModel(private val getPostsUseCase:GetPostsUseCase) : ViewModel() {
+class HomeViewModel(private val getPostsUseCase: GetPostsUseCase) : ViewModel() {
 
 	private val _uiState = MutableStateFlow(HomeState())
 	val uiState: StateFlow<HomeState> = _uiState.asStateFlow()

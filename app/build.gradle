@@ -10,7 +10,7 @@ android {
 	defaultConfig {
 		applicationId "com.startup.ecoapp"
 		minSdk 26
-		targetSdk 32
+		targetSdk 33
 		versionCode 1
 		versionName "1.0"
 
@@ -70,7 +70,7 @@ dependencies {
 	implementation project(path: ':feature:post')
 	implementation project(path: ':feature:signin')
 	implementation project(path: ':feature:signup')
-	implementation 'androidx.core:core-ktx:+'
+	implementation 'androidx.core:core-ktx:1.10.1'
 
 	testImplementation 'junit:junit:4.13.2'
 	androidTestImplementation 'androidx.test.ext:junit:1.1.5'

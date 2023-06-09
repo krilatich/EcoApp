@@ -1,6 +1,12 @@
 package com.startup.ecoapp.feature.post.presentation
 
 import androidx.lifecycle.ViewModel
+import com.startup.ecoapp.feature.post.usecase.GetCommentsUseCase
+import com.startup.ecoapp.feature.post.usecase.GetPostByIdUseCase
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 class PostViewModel(
 	private val getCommentsUseCase: GetCommentsUseCase,
@@ -30,5 +36,4 @@ class PostViewModel(
 			}
 		}
 	}
-}
 }

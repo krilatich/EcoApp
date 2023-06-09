@@ -9,9 +9,9 @@ data class PostState
     val comments:List<Comment> = listOf(),
     val post: Post =  Post(
         text = "Post text" ,
-        avatarId = R.drawable.profile_image,
+        avatarId = 0,
         header = "Some header",
-        imageId = R.drawable.post_image,
+        imageId = 0,
         time = "some hr ago",
         upVote = 1000,
         downVote = 100,

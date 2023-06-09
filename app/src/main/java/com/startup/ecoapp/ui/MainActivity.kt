@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.startup.ecoapp.Navigation
+import com.startup.ecoapp.navigation.Navigation
 import com.startup.ecoapp.ui.theme.EcoAppTheme
 
 class MainActivity : ComponentActivity() {
