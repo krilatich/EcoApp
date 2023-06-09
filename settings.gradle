@@ -1,16 +1,25 @@
 pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
+	repositories {
+		gradlePluginPortal()
+		google()
+		mavenCentral()
+	}
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		google()
+		mavenCentral()
+	}
 }
-rootProject.name = "ecoApp"
+rootProject.name = "EcoApp"
 include ':app'
+include ':core'
+include ':feature'
+include ':shared'
+include ':core:network'
+include ':feature:home'
+include ':feature:post'
+include ':core:theme'
+include ':feature:signin'
+include ':feature:signup'
