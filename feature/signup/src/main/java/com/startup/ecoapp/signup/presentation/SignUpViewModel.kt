@@ -48,7 +48,7 @@ class SignUpViewModel(
 
     fun handle(intent: SignUpIntent) {
         when (intent) {
-            SignUpIntent.ConfirmSignIn -> signUp()
+            SignUpIntent.ConfirmSignUp -> signUp()
 
             is SignUpIntent.ChangeUserFirstName -> updateFirstName(intent.firstName)
 

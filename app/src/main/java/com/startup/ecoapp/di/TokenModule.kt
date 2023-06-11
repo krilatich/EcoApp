@@ -33,6 +33,7 @@ val tokenModule = module {
 		provideRefreshOkHttpClient(
 			logging = get(named(LOG_INTERCEPTOR)),
 			noConnection = get(named(NO_CONNECT_INTERCEPTOR)),
+			header = get(named(HEADER_INTERCEPTOR)),
 			token = get(named(REFRESH_TOKEN_INTERCEPTOR))
 		)
 	}

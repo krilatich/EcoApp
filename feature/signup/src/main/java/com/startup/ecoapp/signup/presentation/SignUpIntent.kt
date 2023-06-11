@@ -1,7 +1,7 @@
 package com.startup.ecoapp.signup.presentation
 
 sealed class SignUpIntent {
-	object ConfirmSignIn : SignUpIntent()
+	object ConfirmSignUp : SignUpIntent()
 	class ChangeUserFirstName(val firstName: String) : SignUpIntent()
 	class ChangeUserLastName(val lastName: String) : SignUpIntent()
 	class ChangeUserBirthDate(val birthDate: String) : SignUpIntent()

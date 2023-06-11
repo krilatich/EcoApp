@@ -1,13 +1,18 @@
 package com.startup.ecoapp.feature.home.models
 
+import com.startup.ecoapp.feature.home.presentation.UserReaction
+
+
 data class Post(
-    val text:String,
-    val header:String,
-    val types:List<String>,
-    val avatarId:Int,
-    val author:String,
+    val id: String,
+    val text: String,
+    val title: String,
+    val categories: List<String>,
+    val avatarImage: String,
+    val author: String,
     val time: String,
-    val imageId:Int,
-    val upVote:Int,
-    val downVote:Int
+    val image: String?,
+    val upVote: Int,
+    val downVote: Int,
+    val userReaction: UserReaction = UserReaction.NONE
 )

@@ -9,6 +9,7 @@ fun provideOkHttpClient(
 	logging: Interceptor,
 	noConnection: Interceptor,
 	token: Interceptor,
+	header: Interceptor,
 	tokenAuthenticator: TokenAuthenticator
 ): OkHttpClient =
 	OkHttpClient().newBuilder()
@@ -16,18 +17,21 @@ fun provideOkHttpClient(
 		.addInterceptor(token)
 		.addInterceptor(noConnection)
 		.addInterceptor(logging)
+		.addInterceptor(header)
 		.applyDefaultSetups()
 		.build()
 
 fun provideRefreshOkHttpClient(
 	logging: Interceptor,
 	noConnection: Interceptor,
-	token: Interceptor
+	token: Interceptor,
+	header: Interceptor
 ): OkHttpClient =
 	OkHttpClient().newBuilder()
 		.addInterceptor(token)
 		.addInterceptor(noConnection)
 		.addInterceptor(logging)
+		.addInterceptor(header)
 		.applyDefaultSetups()
 		.build()
 

@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.startup.ecoapp.feature.post.R
 import com.startup.ecoapp.feature.post.domain.entity.Comment
 import com.startup.ecoapp.feature.post.presentation.PostViewModel
 import com.startup.theme.R as ThemeR

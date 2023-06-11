@@ -19,11 +19,18 @@ class HomeViewModel(private val getPostsUseCase: GetPostsUseCase) : ViewModel() 
 	}
 	fun handle(intent: HomeIntent) {
 		when (intent) {
-			is HomeIntent.UpdatePostsIntent ->
-			{
+			is HomeIntent.UpdatePostsIntent -> {
 				_uiState.update {
 					it.copy(posts = getPostsUseCase())
 				}
+			}
+
+			is HomeIntent.PutUpVote -> {
+				TODO()
+			}
+
+			is HomeIntent.PutDownVote -> {
+				TODO()
 			}
 
 		}
