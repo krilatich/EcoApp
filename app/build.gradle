@@ -66,16 +66,37 @@ dependencies {
 
 	implementation project(path: ':core:network')
 
-	implementation project(path: ':feature:home')
-	implementation project(path: ':feature:post')
-	implementation project(path: ':feature:signin')
-	implementation project(path: ':feature:signup')
-	implementation 'androidx.core:core-ktx:1.10.1'
+	implementation project(path: ':shared:post')
+    implementation project(path: ':shared:reactions')
+    implementation project(path: ':shared:comment')
+    implementation project(path: ':shared:thread')
+    implementation project(path: ':shared:categories')
+
+    implementation project(path: ':feature:home')
+    implementation project(path: ':feature:post')
+    implementation project(path: ':feature:signin')
+    implementation project(path: ':feature:signup')
+    implementation project(path: ':feature:home')
+    implementation project(path: ':feature:blog')
+    implementation project(path: ':feature:threads')
+    implementation project(path: ':feature:thread')
+    implementation project(path: ':feature:blogs')
+    implementation project(path: ':feature:post-creation')
+    implementation project(path: ':feature:profile')
+	implementation project(path: ':feature:map')
+	implementation project(path: ':shared:events')
+	implementation project(path: ':shared:subscriptions')
+	implementation 'com.yandex.android:maps.mobile:4.3.1-lite'
+
+    implementation 'androidx.core:core-ktx:1.10.1'
 
     testImplementation 'junit:junit:4.13.2'
-	androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-	androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-	androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
-	debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
-	debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+
+
 }

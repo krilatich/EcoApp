@@ -15,6 +15,7 @@ import com.startup.ecoapp.core.network.token.data.storage.SharedPrefsDataStorage
 import com.startup.ecoapp.core.network.token.data.storage.TokenDataStorage
 import com.startup.ecoapp.core.network.token.domain.repository.RefreshTokensRepository
 import com.startup.ecoapp.core.network.token.domain.repository.TokenRepository
+import com.startup.ecoapp.core.network.token.domain.usecase.GetUserIdUseCase
 import com.startup.ecoapp.core.network.token.domain.usecase.LoadTokenUseCase
 import com.startup.ecoapp.core.network.token.domain.usecase.RefreshTokensUseCase
 import com.startup.ecoapp.core.network.token.domain.usecase.SaveTokenUseCase
@@ -63,4 +64,5 @@ val tokenModule = module {
 	single { SaveTokenUseCase(get()) }
 	single { LoadTokenUseCase(get()) }
 	single { RefreshTokensUseCase(get()) }
+	single { GetUserIdUseCase(get()) }
 }

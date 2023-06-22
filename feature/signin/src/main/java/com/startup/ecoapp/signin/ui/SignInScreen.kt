@@ -114,7 +114,12 @@ fun SignInScreen(navController: NavController, signInViewModel: SignInViewModel 
             Modifier.width(150.dp)
         )
         {
-            Text("Confirm", style = MaterialTheme.typography.bodyLarge)
+            Text("Confirm", style = MaterialTheme.typography.bodyLarge, modifier = Modifier
+                .clickable {
+                    if (state.error == null)
+                        navController.navigate("home_screen")
+                }
+            )
         }
         Text(
             "Sign Up", modifier = Modifier

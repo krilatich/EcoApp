@@ -1,23 +1,30 @@
 package com.startup.ecoapp.feature.post.presentation
 
-import com.startup.ecoapp.feature.post.R
-import com.startup.ecoapp.feature.post.domain.entity.Comment
-import com.startup.ecoapp.feature.post.domain.entity.Post
+import com.startup.shared.comment.domain.entity.Comment
+import com.startup.shared.post.domain.entity.Post
 
 data class PostState
-    (
-    val comments:List<Comment> = listOf(),
-    val post: Post =  Post(
-        text = "Post text" ,
-        avatarId = 0,
-        header = "Some header",
-        imageId = 0,
-        time = "some hr ago",
-        upVote = 1000,
-        downVote = 100,
-        types = listOf("type1", "type2"),
-        author = "AuthorNickname"
+	(
+	val post: Post = Post(
+        id = "",
+        blogId = "",
+        blogTitle = "",
+        authorFirstName = "",
+        authorLastName = "",
+        //val authorAvatar: String,
+        title = "",
+        text = "",
+        categories = listOf(),
+        photos = listOf(),
+        created = "",
+        edited = "",
+        likes = 0,
+        dislikes = 0,
+        isLike = false,
+        isDislike = false
     ),
-    val isLoading:Boolean = false,
-    val error:String? = null
+	val comments: List<Comment> = emptyList(),
+	val userComment: String = "",
+	val isLoading: Boolean = false,
+	val error: String? = null
 )
